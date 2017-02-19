@@ -1,0 +1,16 @@
+&
+  transition: width, 0.25s, background, 0.25s
+  width: large-view-site-border
+  height: 100%
+  +above(700px)
+    position: fixed
+    right: 0
+    top: 0
+
+&.menu-open
+  background: white
+  width: 20em
+
+.ui-container
+  lost-align: middle-right
+  margin-top: 1.5em

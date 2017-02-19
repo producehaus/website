@@ -1,0 +1,17 @@
+<!-- {{outlet}}
+<ul>
+  {{#each sortedArtists as |artist|}}
+    <li>{{artist.name}}</li>
+    <img src="{{artist.images.firstObject.file.url}}" alt="">
+  {{/each}}
+</ul> -->
+
+<section class="container">
+  {{outlet}}
+</section>
+
+{{elements/matte-element}}
+
+{{navs/top-nav}}
+{{navs/main-nav}}
+{{navs/footer-nav}}
