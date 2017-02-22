@@ -2,6 +2,7 @@
   font-family: "Gilroy", sans-serif
   font-weight: 900
   font-size: 5em
+  background: white
 
   +below(1400px)
     font-size: 4.5em
@@ -21,6 +22,10 @@
   @extend .col-3
 
   padding: 1em
+
+.line
+  width: 1em
+  border: 3px solid
 
 .title-container
   margin-bottom: 0.5em
@@ -58,9 +63,7 @@
     font-weight: 300
 
 .artist-container
-  @extend .col-1
-
-  // padding-right: large-view-site-border
+  @extend .col-2
 
   background: dope-pink
   padding: 1em 1.5em 1em 1em
@@ -68,14 +71,17 @@
   div
     color: white
     font-weight: 500
-    font-size: 0.5em
+    font-size: 2rem
 
 .ui-container
-  margin-top: 0.4em
   +below(min-width-for-matte)
+    border: 2px solid
+    padding: 1rem
     justify-content: center
 
   div
-    margin: 0 .5rem
+    margin-left: 1rem
     font-size: 2.5rem
-    padding: 0 0.4em
+
+  div:first-child
+    margin-left: 0

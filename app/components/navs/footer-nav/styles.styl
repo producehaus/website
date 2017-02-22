@@ -2,29 +2,29 @@
   width: 100%
   font-family: "Gilroy", sans-serif
   font-weight: 300
+  font-size: 0.7em
   lost-align: middle-center
   height: large-view-site-border
   position: fixed
   bottom: 0
-  transition: bottom, 0.25s
+  transition: opacity, 0.25s
   +below(min-width-for-matte)
-    bottom: -10em
-
-
+    opacity: 0
 
 .icon
-  position: fixed
+  position: absolute
   font-size: 0.7em
   animation-name: bobble
   animation-direction: alternate-reverse
-  animation-duration: 1s
+  animation-duration: 0.4s
   animation-iteration-count: infinite
 
 .instructions
+  position: relative
   display: flex
   flex-direction: column
   align-items: center
-  margin-top: -0.5em
+  margin-top: "calc(-%s / 2)" % large-view-site-border
 
 @keyframes bobble {
   from {

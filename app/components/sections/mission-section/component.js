@@ -17,14 +17,14 @@ export default Ember.Component.extend(ScrollAnimatable, {
        ease: Power1.easeInOut
      });
 
-    this.tl.to(this.$(".copy .container"), .75, {
+    this.tl.to(this.$(".copy .container"), 0.75, {
       "margin-left": 0,
       "margin-right": 0,
       opacity: 1,
       ease: Power1.easeInOut
     }, "-=.5");
 
-    this.tl.to(this.$(".copy .container"), .75, {
+    this.tl.to(this.$(".copy .container"), 0.75, {
       "margin-left": "2em",
       "margin-right": "-2em",
       opacity: 0,
