@@ -8,6 +8,9 @@ var poststylus = require('poststylus');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    babel: {
+      optional: ['es7.decorators', 'es7.functionBind']
+    },
     stylusOptions: {
       use: [
         rupture(),

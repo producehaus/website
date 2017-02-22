@@ -1,0 +1,37 @@
+&
+  font-family: "Gilroy", sans-serif
+  lost-align: vertical
+  font-weight: 700
+  font-size: 5em
+  +below(1400px)
+    font-size: 4em
+  +below(1200px)
+    font-size: 3.5em
+  +below(1000px)
+    font-size: 3em
+  +below(800px)
+    font-size: 2.5em
+  +below(600px)
+    font-size: 2em
+
+.copy
+  color: dark-grey
+  lost-column: 3/7
+  lost-offset: 2/7
+  text-transform: uppercase
+  +mobile()
+    lost-column: 6/8
+    lost-offset: 1/8
+
+  .container
+    opacity: 0
+    margin-left: 2em
+    margin-right: -2em
+
+.dot
+  color: dope-pink
+
+.color-block
+  height: 100%
+  background: dope-pink
+  width: 0%

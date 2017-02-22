@@ -3,6 +3,7 @@ import ScrollAnimatable from 'producehaus/mixins/scroll-animatable';
 
 export default Ember.Component.extend(ScrollAnimatable, {
   tagName: "section",
+  classNames: ["row"],
 
   scrolled(ratio) {
     this.tl.pause();

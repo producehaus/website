@@ -1,16 +1,35 @@
 &
   transition: width, 0.25s, background, 0.25s
   width: large-view-site-border
+  position: fixed
   height: 100%
-  +above(700px)
-    position: fixed
-    right: 0
-    top: 0
+  right: 0
+  top: 0
 
 &.menu-open
   background: white
   width: 20em
+  +mobile()
+    width: 100%
+
+  .social-icons-container
+    .icons
+      margin-right: -5em
 
 .ui-container
-  lost-align: middle-right
-  margin-top: 1.5em
+  position: fixed
+  top: 0
+  right: 0
+
+.social-icons-container
+  width: 100%
+  height: 100%
+  align-items: center
+  justify-content: flex-end
+
+  .icons
+    transition: margin-right, 0.25s
+    align-items: center
+    margin-right: 0.5rem
+    div
+      margin: 0.5rem 0

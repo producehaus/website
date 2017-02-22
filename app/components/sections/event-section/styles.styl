@@ -1,0 +1,81 @@
+&
+  font-family: "Gilroy", sans-serif
+  font-weight: 900
+  font-size: 5em
+
+  +below(1400px)
+    font-size: 4.5em
+  +below(1200px)
+    font-size: 4em
+  +below(1000px)
+    // padding: 1em 1em
+    font-size: 3.5em
+  +below(800px)
+    font-size: 3.2em
+  +below(600px)
+    font-size: 3em
+  +below(min-width-for-matte)
+    flex-direction: column
+
+.content-container
+  @extend .col-3
+
+  padding: 1em
+
+.title-container
+  margin-bottom: 0.5em
+
+  span
+    display: block
+
+  .label
+    font-size: 0.7em
+    margin-bottom: 0.5em
+
+  .title
+    font-size: 1em
+    color: dope-pink
+    text-transform: uppercase
+
+  .description
+    font-family: "Libre Baskerville", serif
+    font-weight: 300
+    font-style: italic
+    font-size: 0.5em
+    font-style: italic
+
+.info-container
+  margin-bottom: 0.5em
+
+  span
+    display: block
+
+  .date
+    font-size: 0.5em
+
+  .time
+    font-size: 0.4em
+    font-weight: 300
+
+.artist-container
+  @extend .col-1
+
+  // padding-right: large-view-site-border
+
+  background: dope-pink
+  padding: 1em 1.5em 1em 1em
+
+  div
+    color: white
+    font-weight: 500
+    font-size: 0.5em
+
+.ui-container
+  margin-top: 0.4em
+  +below(min-width-for-matte)
+    justify-content: center
+
+  div
+    margin: 0 .5rem
+    font-size: 2.5rem
+    padding: 0 0.4em

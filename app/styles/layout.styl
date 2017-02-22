@@ -1,10 +1,27 @@
 section
-  lost-utility: clearfix;
-  +above(700px)
-    height: 100vh
+  lost-utility: clearfix
 
 .center
   lost-align: middle-center
 
 .stretch
   height: 100%
+
+.row
+  display: flex
+
+for num in (1..9)
+  .col-{num}
+    display: flex
+    flex-direction: column
+    flex: num
+
+.only-mobile
+  display: none
+  +below(min-width-for-matte)
+    display:inline-flex
+
+.hide-mobile
+  display: inline-flex
+  +below(min-width-for-matte)
+    display: none
