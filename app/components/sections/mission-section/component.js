@@ -18,22 +18,13 @@ export default Ember.Component.extend(ScrollAnimatable, {
      });
 
     this.tl.to(this.$(".copy .container"), 0.75, {
-      "margin-left": 0,
-      "margin-right": 0,
+      "right": "15%",
       opacity: 1,
       ease: Power1.easeInOut
     }, "-=.5");
 
-    this.tl.to(this.$(".copy .container"), 0.75, {
-      "margin-left": "2em",
-      "margin-right": "-2em",
-      opacity: 0,
-      ease: Power1.easeInOut
-    }, "+=.5");
-
     this.tl.to(this.$(".color-block"), 1, {
-       width: "100%",
-       ease: Power1.easeInOut
-     }, "-=.6");
+       opacity: 1
+     }, "+=1");
   }
 });
