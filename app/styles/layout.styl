@@ -2,7 +2,20 @@ section
   lost-utility: clearfix
 
 .center
-  lost-align: middle-center
+  align-items: center
+  justify-content: center
+
+.vcenter
+  justify-content: center
+
+.hcenter
+  align-items: center
+
+.right
+  align-items: flex-end
+
+.bottom
+  align-items: flex-end
 
 .stretch
   height: 100%
@@ -10,10 +23,13 @@ section
 .row
   display: flex
 
+.col
+  display: flex
+  flex-direction: column
+
 for num in (1..9)
   .col-{num}
-    display: flex
-    flex-direction: column
+    @extend .col
     flex: num
 
 .only-mobile

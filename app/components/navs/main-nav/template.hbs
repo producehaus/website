@@ -1,15 +1,39 @@
+<div class="content col stretch">
+  <div class="menu-container collapsed vcenter right hide-mobile col stretch">
+    {{ui/icon-button "twitter"}}
+    {{ui/icon-button "facebook"}}
+    {{ui/icon-button "instagram"}}
+  </div>
+
+  <div class="menu-container expanded col stretch">
+    <div class="nav-links-container col">
+      {{link-to "Home." "index" class="nav-link"}}
+      {{link-to "Events." "events" class="nav-link"}}
+      {{link-to "Contact." "contact" class="nav-link"}}
+      {{link-to "About." "about" class="nav-link"}}
+      {{link-to "Blog." "blog" class="nav-link"}}
+    </div>
+
+    <address class="contact-info col">
+      <a href="mailto:hello@produce.haus">hello@produce.haus</a>
+      <div class="location col">
+        <span>760 South Main St.</span>
+        <span>Los Angeles, CA 90021</span>
+      </div>
+      <span class="number">+1 323-404-0838</span>
+    </address>
+    <div class="icons row bottom">
+      {{ui/circle-icon-link-to-button "instagram" "https://www.instagram.com/producehaus/"}}
+      {{ui/circle-icon-link-to-button "facebook" "https://www.facebook.com/Produce-Haus-426017534404741"}}
+      {{ui/circle-icon-link-to-button "twitter" "https://twitter.com/producehaus"}}
+    </div>
+  </div>
+</div>
+
 <div class="ui-container">
   <button class="hamburger hamburger--slider {{isActive}}" type="button" {{action "toggle"}}>
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
   </button>
-</div>
-
-<div class="social-icons-container hide-mobile">
-  <div class="icons">
-    {{ui/icon-button "twitter"}}
-    {{ui/icon-button "facebook"}}
-    {{ui/icon-button "instagram"}}
-  </div>
 </div>
