@@ -19,6 +19,9 @@ module.exports = function(defaults) {
           rucksack({ autoprefixer: true })
         ])
       ]
+    },
+    fingerprint: {
+      exclude: ['apple-touch-icon', 'favicon', 'mstile']
     }
   });
 
