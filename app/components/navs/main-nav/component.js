@@ -15,6 +15,10 @@ export default Ember.Component.extend({
   actions: {
     toggle() {
       this.set("menuOpen", !this.get("menuOpen"));
+    },
+
+    closeMenu() {
+      this.set("menuOpen", false);
     }
   }
 });
