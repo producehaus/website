@@ -1,7 +1,6 @@
 import Ember from 'ember';
-import ScrollAnimatable from 'producehaus/mixins/scroll-animatable';
 
-export default Ember.Component.extend(ScrollAnimatable, {
+export default Ember.Component.extend({
   tagName: "section",
 
   actions: {

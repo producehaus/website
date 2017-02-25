@@ -15,6 +15,7 @@ module.exports = {
   },
   globals: {
     "TimelineMax": true,
+    "TweenMax": true,
     "Power1": true
   }
 };
