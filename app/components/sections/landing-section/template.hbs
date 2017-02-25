@@ -1,3 +1,11 @@
-<div class="image-container stretch row vcenter hcenter">
-  <img src="/assets/images/logo.svg" alt="">
+<div class="image-container stretch row vcenter hcenter">    
+  {{ui/image-button
+      onHover=(action "onHover")
+      onOut=(action "onOut")}}
+</div>
+
+<div class="backdrop-underlay"></div>
+
+<div class="backdrop-container">
+  <img src="assets/images/leaf.jpg" alt="">
 </div>
