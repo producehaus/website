@@ -5,8 +5,12 @@
   font-weight: 700
   font-family: "Gilroy", sans-serif
   color: dope-grey
+  +below(770px)
+    padding: 1em
 
 img
+  +below(770px)
+    display: none
   width: auto
   height: 3em
   margin-right: 1em
@@ -23,28 +27,37 @@ img
     padding-bottom: 0.5em
 
   .content:last-child
-    border-bottom: 2px solid dope-pink
+    +below(770px)
+      border-bottom: none
 
   .icon-container
     div
       margin-right: 0.5em
 
+.contact-info-container
+  +below(770px)
+    flex-direction: column
+
 .info-section:first-child
   margin-right: 1em
+  +below(770px)
+    margin-right: 0
 
 .nav-links-container
   font-weight: 900
   +below(1400px)
-    font-size: 3em
-    margin-bottom: 1em
-  +below(1200px)
-    font-size: 2.8em
-    margin-bottom: 0.8em
+    font-size: 3rem
+  +below(1130px)
+    font-size: 2rem
   +below(1000px)
-    font-size: 2.6em
-    margin-bottom: 0.6em
+    font-size: 1.8rem
+  +below(900px)
+    font-size: 1.6rem
   +below(800px)
-    font-size: 2.3em
+    font-size: 1.4rem
+  +below(770px)
+    flex-direction: column
+    font-size: 2rem
     margin-bottom: 0.5em
 
   a
@@ -53,12 +66,13 @@ img
 a
   text-decoration: none
   color: inherit
-
-.nav-link:last-child
-  margin-bottom: 0
+  cursor: pointer
 
 a:hover
   text-decoration: underline
+
+.nav-link:last-child
+  margin-bottom: 0
 
 .icons
   font-size: 2em
