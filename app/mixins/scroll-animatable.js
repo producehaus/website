@@ -28,6 +28,22 @@ export default Ember.Mixin.create({
     //Override
   },
 
+  scrolled() {
+    //Override
+  },
+
+  resized() {
+    //Override
+  },
+
+  onReachedBottom() {
+    //Override
+  },
+
+  onHasScrollRemaining() {
+    //Override
+  },
+
   _addInternalListeners() {
     this.boundScroll = ::this._scrollThrottler;
     this.resizeScroll = ::this._resizeThrottler;
@@ -83,22 +99,6 @@ export default Ember.Mixin.create({
     this.set('width', this.$('').width());
 
     this.resized(this.$(window).height());
-  },
-
-  scrolled() {
-    //Override
-  },
-
-  resized() {
-    //Override
-  },
-
-  onReachedBottom() {
-
-  },
-
-  onHasScrollRemaining() {
-
   },
 
   _scrolled() {
