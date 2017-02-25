@@ -7,9 +7,10 @@ export default Ember.Component.extend(ScrollAnimatable, {
   didResize: false,
 
   resized(windowHeight) {
+    this.set("windowHeight", windowHeight);
     if(Modernizr.touch) {
       if(!this.didResize) {
-        this.didIt = true;
+        this.didResize = true;
         this.$('').height(windowHeight);
       }
     } else {
