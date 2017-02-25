@@ -1,37 +1,75 @@
 &
   font-family: "Gilroy", sans-serif
-  lost-align: vertical
   font-weight: 700
-  font-size: 5em
+  font-size: 1em
+
+  @extend .row
+
   +below(1400px)
-    font-size: 4em
+    font-size: 0.8em
   +below(1200px)
-    font-size: 3.5em
+    font-size: 0.7em
   +below(1000px)
-    font-size: 3em
+    font-size: 1em
+    flex-direction: column
+
+.form-container
+
+  .content
+    padding: 2em
+    font-weight: 900
+    font-size: 2rem
+    letter-spacing: 0.1rem;
+    color: #1E1E1E
+    +below(800px)
+      font-size: 1.5rem
+
+    .email
+      margin-right: 1rem
+      +below(800px)
+        width: 100%
+
+    input
+      font-size: inherit
+      font-weight: inherit
+      border: 4px solid #474747
+      background: #E2E2E2
+      box-sizing: border-box
+      padding: 1rem
+
+    .privacy
+      margin-top: 0.5rem
+      font-style: italic
+      font-size: 1rem
+      font-weight: 300
+
+    .dot
+      color: dope-pink
+      +below(800px)
+        display: none
+
+    .button-container
+      +below(800px)
+        input
+          margin-top: 1rem
+          width: 100%
+
+
+.element-container
+  @extend .row
+
   +below(800px)
-    font-size: 2.5em
-  +below(600px)
-    font-size: 2em
+    flex-direction: column
 
-.copy
-  color: dark-grey
-  lost-column: 3/7
-  lost-offset: 2/7
-  text-transform: uppercase
-  +mobile()
-    lost-column: 6/8
-    lost-offset: 1/8
 
-  .container
-    opacity: 0
-    margin-left: 2em
-    margin-right: -2em
+.description
+  color: white
+  background: dope-green
+  padding: 2em
+  align-items: center
 
-.dot
-  color: dope-pink
+  span
+    font-size: 3em
 
-.color-block
-  height: 100%
-  background: dope-pink
-  width: 0%
+.btn
+  cursor: pointer

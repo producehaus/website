@@ -1,5 +1,10 @@
-section
-  lost-utility: clearfix
+.main-container
+  height: 100vh
+
+.wrapper
+  margin: large-view-site-border
+  +below(min-width-for-matte)
+    margin: 0
 
 .center
   align-items: center
@@ -19,6 +24,9 @@ section
 
 .stretch
   height: 100%
+
+.space-between
+  justify-content: space-between
 
 .row
   display: flex
