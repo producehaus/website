@@ -1,0 +1,11 @@
+{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+  {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+  {{#marker-layer location=emberConfLocation}}
+    {{#popup-layer popupOpen=true}}
+      <h3>Produce Haus</h3>
+      1318 E 7th St<br>
+      Los Angeles, CA 90021
+    {{/popup-layer}}
+  {{/marker-layer}}
+{{/leaflet-map}}

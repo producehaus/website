@@ -39,6 +39,7 @@
     "ember-data-contentful": "0.2.0",
     "ember-export-application-global": "^1.0.5",
     "ember-font-awesome": "3.0.3",
+    "ember-leaflet": "3.0.9",
     "ember-link-action": "0.0.35",
     "ember-load-initializers": "^0.6.0",
     "ember-netlify": "0.0.1",

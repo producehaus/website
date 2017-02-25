@@ -14,10 +14,6 @@ export default Ember.Component.extend(ScrollAnimatable, {
   },
 
   scrolled(ratio) {
-    // this.tl.pause();
-    // this.tl.progress(ratio);
-    console.log(ratio);
-
     if(this.played) {
       return;
     }

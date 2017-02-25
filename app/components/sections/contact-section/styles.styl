@@ -1,0 +1,59 @@
+&
+  font-size: 1.5em
+  font-weight: 700
+  font-family: "Gilroy", sans-serif
+
+.main-content-container
+  flex-direction: row
+  padding: 2em
+  +below(980px)
+    flex-direction: column
+    padding: 1em
+    margin-top: 2em
+
+.location-container
+  +below(980px)
+    height: calc(100vw - 2em)
+
+.location-description
+  font-size: 1.5rem
+
+.info-container
+  padding: 1em
+  font-weight: 300
+  font-size: 1em
+
+  +below(1400)
+    font-size: 0.9em
+  +below(1200)
+    font-size: 0.8em
+
+  .info-bit
+    margin: 0.5em 0
+    i
+      width: 40px
+
+  .title
+    font-size: 2em
+    margin-bottom: 1em
+
+.icons
+  font-size: 2em
+  margin-top: 1em
+  +below(980px)
+    justify-content: center
+  div
+    margin-right: 0.5em
+
+.main-content-container
+  border-bottom: 2px solid dope-grey
+
+.directions
+  border-bottom: 2px solid dope-grey
+  padding: 2em
+  margin-bottom: 2em
+  font-weight: 300
+  font-size: 0.8em
+
+  ul
+    list-style:disc

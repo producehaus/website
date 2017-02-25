@@ -1,0 +1,45 @@
+<div class="col">
+  <div class="row main-content-container">
+    <div class="col-1 info-container">
+      <span class="title">Drop us a line <span class="dot">.</span></span>
+      <address class="contact-info col">
+        <span class="info-bit row">
+          {{fa-icon "envelope"}}
+          <a href="mailto:hello@produce.haus">hello@produce.haus</a>
+        </span>
+        <span class="address info-bit  row">
+          {{fa-icon "map-marker"}}
+          <div class="row">
+            <a href="https://www.google.com/maps/place/1318+E+7th+St,+Los+Angeles,+CA+90021/@34.0354024,-118.2431765,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2c62f807498f7:0x71196d4e3b6dedaa!8m2!3d34.0354024!4d-118.2409878" target="_blank" class="content">1318 E 7th. Street, L.A, CA 90021</a>
+          </div>
+        </span>
+        <span class="number info-bit  row">
+          {{fa-icon "phone"}}
+          <a href="tel:1-323-404-0838">+1 323-404-0838</a>
+        </span>
+      </address>
+      <div class="icons row bottom">
+        {{ui/circle-icon-link-to-button "instagram" "https://www.instagram.com/producehaus/"}}
+        {{ui/circle-icon-link-to-button "facebook" "https://www.facebook.com/producehaus"}}
+        {{ui/circle-icon-link-to-button "twitter" "https://twitter.com/producehaus"}}
+        {{ui/circle-icon-link-to-button "medium" "https://medium.com/@producehaus"}}
+      </div>
+    </div>
+    <div class="col-1 location-container">
+      <div class="col stretch map-container">
+        {{elements/map-element}}
+      </div>
+    </div>
+  </div>
+
+  <div class="directions">
+    <ul>
+      <li>The entrance to Produce Haus is via Market Ct, which is the first driveway, just east of Central Ave.</li>
+      <li>Once inside the parking lot, drive all the way back and park where marked on the map.</li>
+      <li>The studio entrance is through the door with the Big Yellow Dot.</li>
+      <li>Second floor.</li>
+    </ul>
+  </div>
+
+  {{sections/newsletter-section}}
+</div>

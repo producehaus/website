@@ -28,12 +28,12 @@ export default Ember.Mixin.create({
   },
 
   _addInternalListeners() {
-    window.addEventListener('scroll', ::this._scrolled);
+    window.addEventListener('scroll', ::this._scrollThrottler);
     window.addEventListener('resize', ::this._resizeThrottler);
   },
 
   _removeInternalListeners() {
-    window.removeEventListener('scroll', ::this._scrolled);
+    window.removeEventListener('scroll', ::this._scrollThrottler);
     window.removeEventListener('resize', ::this._resizeThrottler);
   },
 

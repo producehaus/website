@@ -21,7 +21,16 @@ module.exports = function(defaults) {
       ]
     },
     fingerprint: {
-      exclude: ['apple-touch-icon', 'favicon', 'mstile']
+      exclude: [
+        'apple-touch-icon',
+        'favicon',
+        'mstile',
+        'images/layers-2x.png',
+        'images/layers.png',
+        'images/marker-icon-2x.png',
+        'images/marker-icon.png',
+        'images/marker-shadow.png'
+      ]
     }
   });
 
