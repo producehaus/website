@@ -1,7 +1,21 @@
 import Ember from 'ember';
+import ScrollAnimatable from 'producehaus/mixins/scroll-animatable';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(ScrollAnimatable, {
   tagName: "section",
+
+  didResize: false,
+
+  resized(windowHeight) {
+    if(Modernizr.touch) {
+      if(!this.didResize) {
+        this.didIt = true;
+        this.$('').height(windowHeight);
+      }
+    } else {
+      this.$('').height(windowHeight);
+    }
+  },
 
   actions: {
     onHover() {

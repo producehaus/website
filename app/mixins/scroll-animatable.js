@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Mixin.create({
   resizeTimeout: null,
   lastScroll: 0,
+  isBottom: false,
   ticking: false,
   lastRatio: 0,
 
@@ -30,7 +31,7 @@ export default Ember.Mixin.create({
   _addInternalListeners() {
     this.boundScroll = ::this._scrollThrottler;
     this.resizeScroll = ::this._resizeThrottler;
-    
+
     window.addEventListener('scroll', this.boundScroll);
     window.addEventListener('resize', this.resizeScroll);
   },
@@ -42,6 +43,7 @@ export default Ember.Mixin.create({
 
   _scrollThrottler() {
     this.lastScroll = window.scrollY;
+
     if (!this.ticking) {
       window.requestAnimationFrame(() => {
         this._scrolled(this.lastScroll);
@@ -49,6 +51,21 @@ export default Ember.Mixin.create({
       });
     }
     this.ticking = true;
+    const remainingScroll = (document.body.scrollHeight - $(window).height()) - window.scrollY;
+
+    if(remainingScroll <= 0) {
+      if(!this.isBottom) {
+        this.isBottom = true;
+        this.onReachedBottom();
+      }
+    } else {
+      if(this.isBottom) {
+        this.isBottom = false;
+        this.onHasScrollRemaining();
+      }
+
+    }
+
   },
 
   _resizeThrottler() {
@@ -64,10 +81,24 @@ export default Ember.Mixin.create({
     this.set('position', this.$('').offset());
     this.set('height', this.$('').height());
     this.set('width', this.$('').width());
+
+    this.resized(this.$(window).height());
   },
 
   scrolled() {
     //Override
+  },
+
+  resized() {
+    //Override
+  },
+
+  onReachedBottom() {
+
+  },
+
+  onHasScrollRemaining() {
+
   },
 
   _scrolled() {

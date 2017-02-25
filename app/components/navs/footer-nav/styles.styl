@@ -11,6 +11,10 @@
   +below(min-width-for-matte)
     opacity: 0
 
+&.should-hide-scroll
+  .instructions
+    opacity: 0
+
 .icon
   position: absolute
   font-size: 0.7em
@@ -20,11 +24,13 @@
   animation-iteration-count: infinite
 
 .instructions
+  transition: opacity, 0.25s
   position: relative
   display: flex
   flex-direction: column
   align-items: center
   margin-top: "calc(-%s / 2)" % large-view-site-border
+  opacity: 1
 
 @keyframes bobble {
   from {

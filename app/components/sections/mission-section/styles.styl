@@ -1,9 +1,8 @@
 &
   overflow: hidden
-  height: 100vh
   font-family: "Gilroy", sans-serif
-  lost-align: vertical
   position: relative
+  lost-align: vertical
   font-weight: 700
   font-size: 5em
   +below(1400px)
@@ -17,14 +16,22 @@
   +below(600px)
     font-size: 2em
 
+.copy-container
+  position: absolute
+  top: 0
+  left: 100%
+  right: 0
+  bottom: 0
+
 .copy
   color: dope-grey
   text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
 
-  .container
-    position: absolute
+  .content
     width: 60%
-    right: -60%
 
 .dot
   color: dope-pink
@@ -34,3 +41,4 @@
   height: 100%
   background: dope-pink
   width: 0%
+  z-index: -2
