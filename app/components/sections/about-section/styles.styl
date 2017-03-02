@@ -2,7 +2,9 @@
   font-family: "Gilroy", sans-serif
   font-weight: 300
   font-size: 2em
-  padding: 2em
+  display: flex
+  +below(1250px)
+    flex-direction: column  
   +below(1000px)
     font-size: 2em
   +below(800px)
@@ -12,6 +14,9 @@
     padding: 1em
   +below(400px)
     font-size: 1.6em
+
+.content-container
+  padding: 1em
 
 .title
   margin-bottom: 1em
