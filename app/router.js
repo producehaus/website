@@ -11,6 +11,9 @@ Router.map(function() {
   this.route('events');
   this.route('about');
   this.route('press');
+
+  // Orphan routes
+  this.route('grand-opening');
 });
 
 export default Router;
