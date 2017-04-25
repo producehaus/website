@@ -1,9 +1,10 @@
-<span class="copy article">
+<span class="publication">{{publication}}</span>
+<span class="date">{{date}}</span>
+<span>
   <a href={{link}} target="_blank">"{{title}}"</a>
-  <br>
-  <span class="date">{{date}}</span>
-  <br>
-  <span class="author">
-    <a href="{{authorLink}}" target="_blank">{{author}}</a>
-  </span>
 </span>
+{{#if hasAuthor}}
+  <span class="author">
+    <a href="{{authorLink}}" target="_blank">~{{author}}</a>
+  </span>
+{{/if}}
