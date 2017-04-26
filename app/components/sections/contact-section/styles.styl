@@ -2,6 +2,7 @@
   font-size: 1.5em
   font-weight: 700
   font-family: "Gilroy", sans-serif
+  color: rgba(black, 0.75)
 
 .main-content-container
   flex-direction: row
@@ -31,11 +32,7 @@
   .info-bit
     margin: 0.5em 0
     i
-      width: 40px
-
-  .title
-    font-size: 2em
-    margin-bottom: 1em
+      width: 30px
 
 .icons
   font-size: 2em
@@ -46,18 +43,30 @@
     margin-right: 0.5em
 
 .main-content-container
-  border-bottom: 2px solid dope-grey
+  border-bottom: 2px dashed dope-grey
 
 .directions
-  border-bottom: 2px solid dope-grey
+  border-bottom: 2px dashed dope-grey
   padding: 2em
-  margin-bottom: 2em
-  font-weight: 300
-  font-size: 0.8em
 
-  ul
-    list-style:disc
+  ol
+    list-style:none
+    margin: 0
+    padding: 0
 
 .title
+  font-size: 2em
   font-weight: 900
-  
+
+.content
+  padding: 0 1em
+  font-weight: 300
+
+.hours
+  padding: 2em
+  border-bottom: 2px dashed dope-grey
+  .time
+    font-weight: 700
+  .note
+    font-size: 0.8em
+    font-style: italic
